@@ -1,0 +1,44 @@
+{
+  "name": "ts-rpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "mocha --require ts-node/register 'test/**/*.test.ts'",
+    "build": "npm run lint && rimraf dist && tsc",
+    "start": "npm run lint && tsc && node dist",
+    "lint": "tslint -p .",
+    "remove": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bizarim/ts-rpc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bizarim/ts-rpc/issues"
+  },
+  "homepage": "https://github.com/bizarim/ts-rpc#readme",
+  "dependencies": {
+    "@types/zeromq": "^4.6.2",
+    "eventemitter2": "^5.0.1",
+    "rimraf": "^3.0.0",
+    "zeromq": "^5.1.0",
+    "ts-common": "git+https://github.com/bizarim/ts-common.git#master"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
